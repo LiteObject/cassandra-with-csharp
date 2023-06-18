@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  cassandra:
+    image: cassandra:latest
+    container_name: cassandra
+    ports: 
+      # Cassandra typically uses port 9042 for CQL (Cassandra Query Language) and port 9160 for Thrift.
+      - 9042:9042
+      - 9160:9160
+    volumes:
+      # maps the ./data directory on the host to /var/lib/cassandra inside the container.
+      - ./data:/var/lib/cassandra
+    environment:
+      - CASSANDRA_CLUSTER_NAME=my-cassandra-cluster
