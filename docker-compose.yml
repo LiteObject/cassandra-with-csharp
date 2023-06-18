@@ -12,4 +12,4 @@ services:
       # maps the ./data directory on the host to /var/lib/cassandra inside the container.
       - ./data:/var/lib/cassandra
     environment:
-      - CASSANDRA_CLUSTER_NAME=my-cassandra-cluster
+      - CASSANDRA_CLUSTER_NAME=my-cassandra-cluster   
