@@ -16,7 +16,7 @@
 ---
 ## Here are some common concepts in Cassandra:
 - Keyspace:
-A keyspace is a top-level namespace that defines data replication and other settings. It is similar to a database in the relational database world.
+A keyspace is a top-level namespace that defines data replication and other settings. It is similar to a schema in the relational database world. Typically, a cluster has one keyspace per application.
 - Column Family/Table: 
 In Cassandra, data is organized into column families or tables. Each column family consists of rows that can have different numbers and types of columns. Column families are similar to tables in a relational database.
 - Column: 
@@ -36,6 +36,14 @@ Cassandra is designed to be highly available and fault-tolerant. It achieves thi
  - Tombstones:
  Tombstones are special markers used in Cassandra to represent deleted data. They are necessary to ensure eventual consistency in a distributed system and to propagate deletions across all replicas.
  
+---
+## How to run Cassandra in docker
+- Run the following command from the same folder where the `docker-compose.yml` file is:
+  - `docker-compose up -d`
+- You can also run the Docker CLI command:
+  - `docker run -d --name cassandra -p 9042:9042 cassandra`
+- Connect to the Docker container using the following command:
+  - `docker exec -it cassandra cqlsh`
 ---
 
 ## Links
