@@ -45,7 +45,34 @@ Cassandra is designed to be highly available and fault-tolerant. It achieves thi
 - Connect to the Docker container using the following command:
   - `docker exec -it cassandra cqlsh`
 ---
+## Types of NoSQL Databases
 
+### Document: 
+
+Store data in documents similar to JSON (JavaScript Object Notation) objects. Each document contains pairs of fields and values.
+
+- [MongoDB](https://www.mongodb.com/)
+- [CouchDB](https://couchdb.apache.org/)
+
+### Graph: 
+
+Store data in nodes and edges. Commonly used when we need to traverse relationships to look for patterns such as social networks, fraud detection, and recommendation engines. Nodes: store information about people, places, and things. Edges: store relationships between the nodes
+
+- [Neo4j](https://neo4j.com/)
+
+### Key-Value: 
+Stores items as keys and values. A value can typically only be retrieved by referencing its value. Common use cases include storing user preferences or caching.
+
+- [Redis](https://redis.io/)
+- [Memcached](https://memcached.org/)
+
+### Wide-Column: 
+Store data in tables, rows, and dynamic columns. Wide-column stores provide a lot of flexibility over relational databases because each row is not required to have the same columns. Commonly used for storing Internet of Things (IoT) data and user profile data.
+
+- [Cassandra](https://cassandra.apache.org/_/index.html)
+- [HBase](https://hbase.apache.org/)
+
+---
 ## Links
 * [Get Started with Apache Cassandra](https://cassandra.apache.org/_/quickstart.html)
 * [DataStax C# Driver for Apache Cassandra](https://github.com/datastax/csharp-driver)
